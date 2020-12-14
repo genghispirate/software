@@ -55,14 +55,21 @@ alias myip='curl ipv4.icanhazip.com'
 alias grep='grep --color=auto'
 
 ####################################
-alias update="sudo pacman -Suuy"
-alias instal="sudo pacman -S"
-alias remove="sudo pacman -R"
+alias update="doas -- pacman -Suuy"
+alias instal="doas --  pacman -S"
+alias remove="doas --  pacman -R"
 alias c="clear"
 alias untar="tar xvf"
 alias bandwidth="vnstat"
-alias ubuntu="sudo docker run -it ubuntu bash"
-
+alias ubuntu="doas docker run -it ubuntu bash"
+alias sleep="systemctl suspend"
+alias centos="ssh -p 2222 host@localhost"
+alias logout="doas pkill -u host"
+alias sudo=doas
+alias i="doas -- pacman -S"
+alias r="doas -- pacman -R"
+alias grep="grep --color"
+alias ll="ls -la"
 
 
 
